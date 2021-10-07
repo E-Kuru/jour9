@@ -1,4 +1,5 @@
 // Aujourd'hui 
+
 function space (){
     console.log("");
     console.log("");
@@ -49,6 +50,39 @@ function calculateAge (age){
     
 }   
 calculateAge('2001/10/28')
+space()
 
 // Bonus 
 
+var moment = require('moment');
+
+var momentDay = moment().format('dddd');
+
+var momentMonth = moment().format('MMMM');
+
+function momentDays (date){
+
+    console.log(`Today's day is ${date}`);
+}
+momentDays(momentDay)
+space()
+
+function momentMonths (date){
+    console.log(`Today's Month is ${date}`);
+}
+momentMonths(momentMonth)
+space()
+
+function momentFormat (date){
+    var format = moment().format(date,'L');
+    console.log(format);
+}
+
+momentFormat('2001/10/28')
+space()
+
+function momentAge (date){
+    var age = moment(date, "YYYYMMDD").fromNow('YYYY');
+    console.log(`U actually have ${age} old`);
+}
+momentAge('2001/10/28')
