@@ -25,7 +25,7 @@ space()
 // Mois Courant 
 
 function whatMonthIsIt (date){
-    console.log(`Aujourd'hui nous sommes au mois de ${date}`);
+    console.log(`Aujourd'hui nous sommes en ${date}`);
 }
 whatMonthIsIt(newMonth)
 space()
@@ -54,7 +54,7 @@ space()
 
 // Bonus 
 
-var moment = require('moment');
+const moment = require('moment');
 
 var momentDay = moment().format('dddd');
 
@@ -74,11 +74,10 @@ momentMonths(momentMonth)
 space()
 
 function momentFormat (date){
-    var format = moment().format(date,'L');
+    var format = moment(date).format('DD/MM/YYYY');
     console.log(format);
 }
-
-momentFormat('2001/10/28')
+momentFormat('2001-10-28')
 space()
 
 function momentAge (date){
